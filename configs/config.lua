@@ -12,9 +12,9 @@ Config.keys = {
 -----------------------------------------------------
 
 -- Bleed Config
-Config.bleedChance = 75          -- Chance of bleed (lower - easier, higher - harder)
+Config.bleedChance = 50           -- Chance of bleed (lower - easier, higher - harder)
 
-Config.StopBleedOnRevive = true  -- Stops Player Bleeding on Revive
+Config.StopBleedOnRevive = false  -- Stops Player Bleeding on Revive
 Config.StopBleedOnRespawn = true -- Stops Player Bleeding on Respawn
 
 Config.restartBleedTime = 60      -- Time in minutes to Restart Bleed After Temp Healing with Bandage Item
@@ -37,12 +37,10 @@ Config.cabinet = {
 -- Translate `label` for Cabinet Menu
 Config.BandageItems = {
     { item = 'Bandage', label = 'Bandage' },
-    { item = 'Rags',    label = 'Rag' }
 }
 
 Config.ReviveItems = {
     { item = 'DocMorphine',   label = 'Morphine' },
-    { item = 'SmellingSalts', label = 'Smelling Salts' }
 }
 
 Config.Stitches = {
@@ -88,15 +86,15 @@ Config.doctors = {
     gonegative = false,         -- Can you go negative paying for NPC revival // Works only if useFixCost = true
     timer = 1,                  -- How many minutes between calls
     toHospital = false,          -- if true, player will be respawned to nearby hospital else will be revived on spot
-    RandomRemove = false,        -- NPC Revive randomly takes items from the inventory. Either nothing, just items, just weapons or everything
+    RandomRemove = false,        -- NPC Revive randomly takes items from the inventory. Either nothing, just i           tems, just weapons or everything
 }
 -----------------------------------------------------
 
-Config.MedicAssistant = true
+Config.MedicAssistant = false
 Config.AssistantReviveMoney = 35
 Config.AssistantHealMoney = 20
 Config.MedicAssistantBlips = false
-Config.MedicAssistantNPC = true
+Config.MedicAssistantNPC = false
 Config.MedicAssistantLocations = {
     {
         coords = vector3(-283.51, 807.64, 119.39), -- Valentine
@@ -130,7 +128,7 @@ Config.MedicAssistantLocations = {
     }
 }
 
-Config.Alerts = true
+Config.Alerts = false
 Config.alertPermissions = {
     ["medicalEmergency"] = {
         allowedJobs = {
